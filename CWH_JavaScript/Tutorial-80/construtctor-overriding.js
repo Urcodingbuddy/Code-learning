@@ -21,7 +21,7 @@ class Programmer extends Employee {
     constructor(name) {
         super(name); // Passes the name to the Employee constructor
     }
-    
+
     RequestCoffee(x) {
         console.log(`Programmer has requested ${x} coffees`);
     }
@@ -32,13 +32,13 @@ class Programmer extends Employee {
 }
 
 // Example usage:
-let e = new Employee();
-e.login();
-e.logout(); // Corrected method call
-e.RequestLeave(5);
+// let e = new Employee();
+// e.login();
+// e.logout(); // Corrected method call
+// e.RequestLeave(5);
 
 let p = new Programmer("John Smith");
 p.login();
-p.logout(); // Corrected method call
-p.RequestCoffee(2);
+// p.logout(); // Corrected method call
+// p.RequestCoffee(2);
 p.RequestLeave(3); // Now you can pass any number of leaves, and it will request that number + 1
