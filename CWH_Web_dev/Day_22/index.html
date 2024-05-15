@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Sizing units</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            font-size: 12px;
+        }
+        
+        .box{
+            /* box-sizing: border-box;
+            border: 3px solid black;
+            width : 60vw;
+            height: 10vh;
+            margin: 23px auto;
+            background-color: aqua; */
+            box-sizing: border-box;
+            border: 4px solid rgb(4, 4, 4);
+            width: 60vw;
+            height: 10vh;
+            margin: 23px auto;
+            background-color: aqua ;
+            
+        }
+        
+
+        .container{
+            /* box-sizing: border-box;
+            border: 2px solid black;
+            width : 80vw; */
+            /* Ex = height: 80vh; */
+            /* min-height: 80vh; 
+            margin: 23px auto;
+            background-color: aqua;
+            font-size: 16px; */
+
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+            min-height: 80vh;
+            margin: 23px auto;
+            background-color: aqua;
+            font-size: 20px;
+        }
+        .container p{
+            font-size: 2em;
+            width: 50%;
+            border: 2px solid black;
+            /* font-size: 2rem; */
+        }
+
+        .mycount{
+            box-sizing: border-box;
+            margin: 23px auto;
+            border: 2px solid black;
+            width: 80vw;
+          
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        This is a box
+    </div>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam accusantium nisi omnis aliquid quam voluptates consequatur atque, architecto laboriosam. Temporibus illum dolorem natus debitis odit necessitatibus! Accusamus, porro animi molestias rem excepturi neque.
+        </p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit debitis cum delectus rerum autem hic! Accusantium optio maxime consequuntur voluptas id rerum. Recusandae excepturi ex quia assumenda necessitatibus sequi sint nam a officia iusto officiis facilis delectus, labore quisquam quis? Excepturi ducimus mollitia dicta quo assumenda? In non amet cumque maxime quis tempore sed, voluptas quo nemo voluptatem maiores, placeat reiciendis! Temporibus vero laborum ex itaque voluptatum esse. Molestiae expedita dolores nam repudiandae perspiciatis? Nisi placeat molestiae esse culpa quae nam beatae minima, nesciunt perferendis dolore asperiores voluptatem fugit quidem. Modi dolorem veritatis, fugit alias voluptates rerum necessitatibus dicta velit aperiam, soluta sapiente aliquam ullam molestias! Culpa quos voluptas quaerat commodi inventore architecto nobis quis ratione nesciunt porro accusantium cupiditate quia, soluta repellat, saepe odio perferendis maiores rerum, id quo distinctio consequuntur? Id alias minus, cupiditate cum sit totam magni laboriosam repellendus molestias at facere culpa natus error modi eum magnam soluta libero odit ea voluptatibus amet recusandae vero accusantium? Id deleniti nesciunt consequatur atque neque, inventore ad aspernatur ea eveniet tempore quasi libero iusto tenetur blanditiis repudiandae eos, itaque totam, commodi iure! Animi perferendis voluptatum porro eligendi. Nulla explicabo assumenda nostrum praesentium dolore consequatur iure id dolorem doloremque quaerat.
+    </div>
+   
+    <div class="mycount">
+        I am another container
+    </div>
+    
+
+</body>
+</html>

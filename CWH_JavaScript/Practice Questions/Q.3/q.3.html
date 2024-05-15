@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script>
+        alert("Welcome to the Word Guessing Game!")
+        let words = ["Engine", "Food", "Bros", "Limited", "Hub", "Crazy", "Amazing", "Fire"]
+        let wordindex = Math.floor(Math.random() * words.length)
+        let selectedword = words[wordindex]
+        let underscore = "_".repeat(selectedword.length).split('');
+        let maxInccorectguessing = selectedword.length + 5
+        let incorrctguessing = 0;
+        let guessedletters = [] 
+
+        while(displayedword.join('') !== selectedword && incorrctguess < maxInccorectguessing){
+
+            alert(underscore.join(''))
+            let guess = prompt("Guess a letter").toUpperCase();
+            
+            if(guessedletters.includes(guess)){
+                alert("You have already guessed this letter")
+                continue;
+            }
+            else{
+                guessedletters.push(guess);
+            }
+
+            if(selectedword.includes(guess)){
+                for(let i = 0; i < selectedword.length; i++){
+                    if(selectedword[i] === guess){
+                        displayedword[i] = guess;
+                        
+                    }
+
+            }
+
+        }
+    }
+
+    </script>
+</body>
+</html>

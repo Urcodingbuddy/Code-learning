@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="icon" href="Calculator_31111.ico" type="image/x-icon">
+    <script src="faultycalc.js"></script>
+    <script>            
+let a = prompt("Enter your First number to")
+
+let operator = prompt("Choose the mathmetical Operator + , - , / , x")
+
+let b = prompt("Enter your Second number")
+
+let c = Math.random();
+
+// let result; 
+
+if (operator == "+") {
+    result =   a - b + c;
+}
+
+else if( operator == "-" ){
+    result =  a / b + c;
+}
+
+else if(operator == "*"){
+    result =  a + b + c;
+}
+
+else if(operator == "/"){
+    result =  a ** b + c;
+
+}
+else{
+    result = ("Invalid selection Bhadve")
+}
+
+alert("Your answer is:", result)
+    </script>
+</head>
+<body>
+    Orignal calculator
+</body>
+</html>

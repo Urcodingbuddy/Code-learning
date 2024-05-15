@@ -1,0 +1,149 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html {
+    background-color: #fff;
+}
+
+.logo {
+    width: 40px;
+    height: 23px;
+    /* background-color: blueviolet; */
+}
+
+.logo img {
+    width: 160px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.right ul {
+    display: flex;
+    gap: 34px;
+}
+
+.right ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+.right svg{
+    cursor: pointer;
+}
+
+li:hover {
+    color: rgb(231, 42, 42);
+}
+
+.first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 70px;
+    margin: 50px;
+}
+
+.first span{
+    color: #222222;
+    font-size: 46px;
+    font-family: sans-serif;
+
+}
+
+.try{
+    color: #222222;
+    font-size: 20px;
+    width: 52vw;
+    text-align: center;
+    
+}
+.mclinux button{
+    background-color: #00b6d1;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 16px;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+}
+.first button:hover{
+    cursor: pointer;
+    background-color:#008da3;
+    color: #ffffff;
+    
+}
+strong{
+    font-weight: 700;
+}
+
+.second{
+    max-width: 60vw;
+    max-height: 40vh;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+
+}
+.flex img{
+    width: 70px;
+}
+
+.big{
+    font-size: 23px;
+}
+
+.btn{
+    background: #00b6d1;
+    padding: 14px 16px;
+    
+}
+
+.item{
+    padding: 23px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button{
+    cursor: pointer;
+}
+.item-lang{
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 24px;
+    
+
+}
+/* .item-lang2{
+    text-align: center;
+    
+} */
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+.download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+    ;
+}
+
+.flex span{
+    padding: 30px;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "Poppins", sans-serif;
+            /* font-weight: 100; */
+            /* font-style: normal; */
+            scrollbar-width: 0px;
+        }
+
+        /* here is a navbar style  */
+
+
+        nav{
+            background-color: rgb(95, 84, 214);
+            color: rgb(255, 255, 255);
+            
+
+        }
+
+        header, nav, ul{
+            display: flex;
+            position: sticky;
+            top: 0;
+        }
+
+        
+
+        nav ul li {
+            list-style: none;
+            margin: 5px;
+            margin-left: 30px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+            font-weight: bolder;
+        }
+
+        a:hover {
+            color: aquamarine;
+        }
+
+        /* from here body style starts */
+        .main{
+            border: 2px solid black;
+            height: 80vh;
+            width: 100%;
+            display: flex;
+
+        }
+
+        .one {
+            border: 2px solid yellow;
+            height: 50vh;
+            width: 30vw;
+            margin: auto;
+            /* display: flex; */
+        }
+
+        /* here i start footer */
+        .foot {
+            /* border: 2px solid black; */
+            height: 20vh;
+            display: flex;
+            /* margin: 24px; */
+        }
+
+        .left {
+            /* border: 2px solid black; */
+            width: 60px;
+            margin: auto;
+            font-size: 33px;
+        }
+
+        .mid {
+            /* border: 2px solid black; */
+            margin: auto;
+            font-size: 33px;
+            width: 60px;
+        }
+
+        .right {
+            /* border: 2px solid black; */
+            width: 60px;
+            font-size: 33px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a> </li>
+                <li><a href="#">Service</a> </li>
+                <li><a href="#">Help</a> </li>
+                <li><a href="#">contact us</a> </li>
+                <li><a href="#">About us</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="one" id="one">i am one </div>
+        <div class="one" id="two">i am two</div>
+    </div>
+    <div class="foot">
+        <div class="left">
+            <div> left</div>
+            <div> left</div>
+            <div> left</div>
+        </div>
+        <div class="mid">
+            <div>middle</div>
+            <div>middle</div>
+            <div>middle</div>
+        </div>
+        <div class="right">
+            <div>right</div>
+            <div>right</div>
+            <div>right</div>
+        </div>
+    </div>
+</body>
+
+</html>

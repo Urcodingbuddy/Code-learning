@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(27, 23, 23);
+        }
+        .child{
+            border: 2px solid #62ff00;
+            background-color: #bd7373;
+            padding: 34px;
+            margin: 34px;
+        }
+        .childContainer{
+            background-color: #e13131;
+            margin: 14px;
+            padding: 14px;
+        }
+
+        .container{
+            background-color: #7e0404;
+            margin: 14px;
+            padding: 14px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="childContainer">
+            <div class="child">Hey i am a chlid</div>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("Child was Clicked")
+        })
+
+        document.querySelector(".childContainer").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("ChildContainer was Clicked")
+        })
+        document.querySelector(".container").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("Container was Clicked")
+        })
+        document.querySelector(".container").removeEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("Container was Clicked")
+        })
+
+
+        function getRandomColor(){
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+
+            return `rgb(${val1},${val2},${val3})`
+        }
+
+        // setInterval(()=>{
+        //     document.querySelector(".childContainer").style.background = getRandomColor();
+        //     document.querySelector(".container").style.background = getRandomColor();
+        //     document.querySelector(".child").style.background = getRandomColor();
+        // },200);
+
+
+        setTimeout(()=>{
+            document.querySelector(".childContainer").style.background = getRandomColor();
+            document.querySelector(".container").style.background = getRandomColor();
+            document.querySelector(".child").style.background = getRandomColor();
+        },200);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 90vw;
+            height: 90vh;
+            margin: auto;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button id="mybutton">  Click me  </button>
+    </div>
+    <script>
+        function clickdetect(element, callback){
+            element.addEventListener("click", callback);
+        }
+
+        let button = document.getElementById("mybutton");
+
+        function handleclick(){
+            alert("Button Clicked!")
+        }
+
+        clickdetect(button, handleclick)
+
+    </script>
+    <!-- <script src="callbackpractice.js"></script> -->
+    <script src="Json Fetch Data.js"></script>
+</body>
+</html>

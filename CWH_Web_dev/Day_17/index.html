@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors </title>
+    <style>
+        /* Element Selector */
+        div {
+            /* background-color: rgb(226, 233, 97); */
+        }
+
+        /* Class selector */
+        .red {
+            background-color: rgb(192, 8, 39);
+        }
+
+        /* Id selector  */ /* id="green" */
+
+        #green {
+            background-color: chartreuse;
+        }
+
+        /*  Child selector  */
+        div>p {
+            color: rgb(238, 151, 1);
+        }
+
+        /* Descendent Selector   */
+
+        div h2 {
+            color: rgb(70, 2, 56);
+        }
+
+        /* Universal Selector */
+        * {
+            margin: 6%;
+            padding: 4%;
+        }
+
+        /* Pseudo selectors */
+
+        a:visited {
+            color: rgb(255, 255, 8);
+        }
+
+        a:link {
+            color: white;
+        }
+
+        a:active {
+            background-color: black;
+        }
+
+        a:hover {
+            background-color: black;
+        }
+
+        main > p:first-child{
+            background-color: rgb(8, 230, 34);
+        }
+
+        
+
+        body {
+            background-color: rgb(40, 2, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="green">I am first Div:)
+
+        <p>
+        <h2>I am the use of Descendent Selector</h2>
+        </p>
+    </div>
+
+    <div class="red"><p> i am child selector</p>
+         i am second div
+        
+    </div>
+
+    <a href="https://www.youtube.com">Youtube Home page</a>
+</body>
+
+<div>
+    <main class="one">
+        <p>I am first child </p>
+        <p>I am second Child</p>
+    </main>
+</div>
+
+</html>

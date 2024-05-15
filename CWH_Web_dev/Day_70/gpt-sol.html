@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Boxes</title>
+    <style>
+        .box {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            display: inline-block;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        // Function to generate a random color in hexadecimal format
+        function getRandomColor() {
+            return '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+
+        // Create and append five boxes with random colors and backgrounds
+        for (let i = 0; i < 5; i++) {
+            // Create a new box element
+            let box = document.createElement('div');
+            box.className = 'box';
+
+            // Generate random color and background color
+            let color = getRandomColor();
+            let backgroundColor = getRandomColor();
+
+            // Apply the random colors
+            box.style.color = color;
+            box.style.backgroundColor = backgroundColor;
+
+            // Append the box to the container
+            document.getElementById('container').appendChild(box);
+        }
+    </script>
+</body>
+</html>

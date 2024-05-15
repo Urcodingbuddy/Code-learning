@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Css selectors</title>
+    <style>
+        /* body{
+            background-color: black;
+            color: black;
+        } */
+
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .boxes *{
+            border: 2px solid red;
+            font-style: italic;
+            text-indent: 2px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /* .box:first-child{
+            background-color: red;
+            color: blanchedalmond;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight:bold;
+        } */
+
+        /* .box:first-child{
+            background-color: black;
+            color: aliceblue;
+            font-weight: lighter;
+            font-family:'Courier New', Courier, monospace;
+            
+        }
+
+        .box:first-child p{
+            padding: 25px;
+        }
+
+        .box:first-line{
+            color: chartreuse;
+            
+        }
+
+        p, .box, [data-color="primary"]{
+            margin-top: 45px;
+            margin-bottom: 50px;
+            padding-top: 45px;
+        } */
+
+        .box:nth-child(even){
+            background-color: #e2df08;
+            color: rgb(232, 239, 237);
+        }
+
+        .box:last-child{
+            background-color: aqua;
+            margin-bottom: 20px;
+        }
+
+        .box:nth-last-child(2){
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            color: blueviolet;
+        }
+
+        .boxes::before{
+            content: "Ansh is  a good boy";
+        }
+
+        /* .boxes::after{
+            content: "Sigma Course is the Best ";
+            color: rgb(255, 255, 0);
+            background-color: rgb(1, 54, 100);
+            border: 2px solid black;
+            padding: 20px ;
+            margin: 200px;
+        } */
+
+        /* .boxes::selection{
+            color: rgb(255, 0, 0);
+        } */
+
+        ::selection{
+            color: rgb(255, 255, 255);
+            background-color: blueviolet;
+        }
+
+        .box::first-letter{
+            color: peru;
+            font-size: 90px;
+            text-transform:lowercase;
+        }
+
+        input::placeholder{
+            color: blueviolet;
+            margin: 20px;
+            padding: 20px;
+            font-size: 56px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, itaque cumque assumenda ex ipsum obcaecati quod nulla expedita esse voluptatum cupiditate dolorum saepe! Cupiditate cum, perferendis mollitia deserunt consequatur eligendi iure inventore assumenda dolor itaque vitae placeat nemo harum consequuntur ab rerum quasi dignissimos quaerat aperiam, adipisci facilis vel nobis ipsum? Quae asperiores ipsa illo sed, eius obcaecati ea, sunt placeat molestias iure, ipsum sapiente soluta blanditiis! Odit, tenetur? Enim repellendus quas voluptate delectus placeat dolores corporis cum deserunt, nemo velit illum nulla ab, itaque quaerat, soluta mollitia voluptatibus impedit amet. Nemo laudantium quidem illo distinctio fugiat sit architecto amet delectus deleniti iusto, hic aperiam nesciunt! Veniam dignissimos numquam vitae, assumenda fugiat nesciunt aliquam deserunt dolor quam explicabo inventore voluptatem obcaecati eos a praesentium at. Neque voluptatibus corporis sint unde? Iure maxime nam reprehenderit cum perferendis cumque ea quod voluptatibus esse sapiente. Quos, consectetur quidem est consequatur atque dignissimos tempora sed vero placeat suscipit molestias fuga nostrum iure facilis qui recusandae. Quasi reprehenderit amet, in accusamus quia ipsa eos doloribus ullam laborum ipsam quae provident quibusdam optio hic cupiditate architecto itaque earum corporis labore maxime deserunt fugit odio veritatis doloremque. Fuga, impedit eum doloremque itaque ipsum ab sed libero accusamus! Accusantium harum animi distinctio neque laborum magnam nesciunt aliquam possimus, optio praesentium quae ad placeat architecto voluptatibus officia minima sequi ullam hic aperiam rem! Inventore quod nemo asperiores sit nostrum, cumque esse fugit officiis culpa dolores excepturi eius nobis cum neque, quia tempore voluptas molestias blanditiis iusto? Commodi laudantium nihil doloribus consectetur, voluptatum itaque inventore neque illo. Fugit tempore perspiciatis possimus. Dolor, accusantium, illo fugit necessitatibus non architecto molestias deleniti aliquid qui dolorem ut minus dicta quos temporibus inventore eligendi error ullam. Molestias, soluta recusandae praesentium blanditiis fugiat eum repudiandae ab doloremque facere! Quam illo eligendi tenetur ipsa molestiae ipsum debitis dolorum? Provident animi nesciunt sed distinctio exercitationem nostrum quidem. Distinctio eius mollitia dolores tempora aut commodi accusamus minus eaque quibusdam consequatur hic, fuga reprehenderit quia doloribus est deleniti dolorem repudiandae laboriosam pariatur ea voluptatem. Dignissimos, quas laborum maiores ipsum architecto excepturi id iure modi explicabo? Minus vero rem repudiandae vel minima in aliquid voluptates est, enim dolore accusantium ducimus ex impedit fugiat ut omnis consequatur quasi libero ab quas laboriosam! Quibusdam iusto voluptatibus, voluptate temporibus quo, sequi facilis quis ut dicta iure sint officiis maiores harum tenetur consequatur veniam deleniti totam nisi! Soluta velit doloremque consectetur magnam cum perferendis excepturi voluptates aut officiis laudantium molestiae recusandae quos modi delectus maiores aperiam, quidem sed corrupti facere? Error expedita eius earum nesciunt, velit labore distinctio ipsum harum, numquam sapiente similique saepe dolorum aspernatur, unde quia ad a quos. Suscipit quibusdam nam a veritatis quia eum tempore in dolorum animi aperiam ad, molestias dignissimos consequuntur tempora quos!    
+        </p>
+        </div>
+        <div class="box">Hey i am a box2</div>
+        <div class="box">Hey i am a box3</div>
+        <input type="UserName" placeholder="Type Here">
+    </div>
+</body>
+</html>

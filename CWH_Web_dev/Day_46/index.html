@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container{
+            background-color: rgb(9, 106, 106);
+            height: 80vh;
+            width: 72vw;
+
+        }
+
+        .circle{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 110px;
+            margin-top: 10PX;
+            /* background-color: aqua; */
+            /* animation-name: NewAnimation; */
+            /* animation-duration: 1s;
+            animation-iteration-count:infinite;
+            animation-timing-function: cubic-bezier(0, 0, 0 , 0.96);
+            animation-delay: 1s; */
+            /* animation-direction:alternate-reverse; */
+            /* animation-play-state: paused; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: NewAnimation1 1s ease-in-out 1ms infinite alternate-reverse;
+        }
+
+        .rectangle{
+            width: 100px;
+            height: 50px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            margin-top: 10PX;
+            animation: NewAnimation2 2s linear 10ms infinite alternate-reverse;
+            border-radius: 20px;
+        }
+
+        @keyframes NewAnimation1  {
+            from{
+                background-color: red;
+                color: aliceblue;
+            }
+            to{
+                background-color: yellow;
+                transform: translate(1000px);
+            }
+            
+        }
+
+        @keyframes NewAnimation2 {
+
+            from{
+                background-color: red;
+                color: rgb(252, 25, 0);
+            }
+                 0%{
+                    transform: rotate(0);
+                    color: blanchedalmond;
+                 }
+                25%{
+                    transform: rotate(90deg);
+                    color: rgb(239, 200, 141);
+                }
+                50%{
+                    transform: rotate(180deg);
+                    color: rgb(239, 179, 90);
+                }
+                75%{
+                    transform: rotate(270deg);
+                    color: rgb(243, 170, 61);
+                }
+               100%{
+                    transform: rotate(360deg);
+                    color:rgb(255, 153, 0) ;
+               }
+
+               
+            to{
+                background-color: yellow;
+                transform: translate(1000px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle">
+             New
+             Animation1 
+            </div>
+            <div class="rectangle">
+                New
+                Animation2
+            </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@bolder;bolder;bolder&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    background-color: black;
+    font-family: 'Martel Sans', sans-serif;
+    
+}
+
+.main {
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12fea5197bd3/IN-en-20240311-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-position: center center;
+    height: 80vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    
+
+}
+
+.black {
+    position: absolute;  
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.604);
+    height: 80vh;
+    width: 100%;
+
+
+
+}
+
+nav .logo svg {
+    fill: red;
+    height: 45px;
+    top: 5;
+}
+
+.black nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    /* position: absolute; */
+    /* top: 10px; */
+}
+
+.btn button {
+    border: none;
+    padding: 1px;
+    background: #00000026;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.btn button svg {
+    fill: white;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 23px;
+
+}
+
+.btn .one {
+    border: 1px solid rgba(255, 255, 255, 0.546);
+
+    border-radius: 6px;
+}
+
+.btn .two {
+    background-color: red;
+    padding: 6.4px;
+    border-radius: 6px;
+
+}
+
+.box {
+    /* border: 2px solid white; */
+    height: 50vh;
+    /* width: 70vw; */
+    margin: 108px auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 98px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box h1 {
+    font-size: 74px;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    /* font-weight: 400; */
+    /* font-style: normal; */
+}
+.box h2{
+    font-size: 1.25rem;
+    margin: 9px;
+    
+}
+.box h3{
+    margin-top: 15px;
+    margin-bottom: 9px;
+    
+    font-size: 1rem;
+    font-weight:100;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 15px;
+
+}
+.search .text{
+    padding: 23px;
+    width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.503);
+    background-color: rgba(0, 0, 0, 0.274);
+    border-radius: 8px;
+    
+}
+.text::placeholder{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.734);
+}
+.search button{
+    height: 61px;
+    border: none;
+    border-radius: 10px;
+    width:195px ;
+    font-size: 24px;
+    font-weight: 400;
+    
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: aliceblue;
+    cursor: pointer;
+}
+.search button svg{
+    fill: white;
+
+}
+.line{
+    /* width: 100vw; */
+    height: 7px;
+    background-color: rgb(46, 44, 44);
+}
+
+.box2{
+    height: 400px;
+    width: 1155px;
+    /* border: 2px solid white; */
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+
+.box2 div:first-child{
+    color: white;
+    position: relative;
+}
+.box2 div span{
+    display: block;
+    
+
+}
+
+.box2 .img img{
+    height: 371px;
+    width: 517px;
+   position: relative;
+   top: 0;
+    z-index: 1;
+}
+.box2 .img video{
+    height: 290px;
+    width: 379px;
+    position: absolute;
+    top: 726px;
+    right: 344px;
+    
+}
+.first{
+    font-weight: bolder;
+}
+.first .one{
+    font-size: 48px;
+    font-weight: bolder;
+}
+.first .two{
+    font-size: 24px;
+}
+.box3{
+    height: 400px;
+    width: 1155px;
+    /* border: 2px solid white; */
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.box3 span{
+    display: flex;
+    color: white;
+    /* text-align: center; */
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* font-size: 30px; */
+}
+
+.box3 div img{
+    height: auto;
+    width: 520px;
+
+}
+.box3 div .first{
+    font-size: 50px;
+}
+.box3 div .second{
+    
+    font-size: 24px;
+}

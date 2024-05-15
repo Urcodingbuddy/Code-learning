@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Pro</title>
+    <link rel="icon" href="Calculator_31111.ico" type="image/x-icon">
+    <script src="faultyeval.js"></script>
+    <script>
+        let random = Math.random()
+let a = prompt("Enter First Number")
+let b = prompt("Enter Second number")
+let c = prompt("Enter Operation")
+
+let obj = {
+    "+": "-",
+    "*": "+",
+    "-": "/",
+    "/": "**"
+}
+
+
+if(random>0.1){
+    // Perfom correct calculation
+    alert(`The result is ${eval(`${a} ${c} ${b}`)} `)
+}
+else
+{
+    // perform wrong calculations
+    c =  obj[c]
+    alert(`The result is ${eval(`${a} ${c} ${b}`)} `)
+}
+
+
+prompt("REsult is", result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

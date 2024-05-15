@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Enter Your Age")
+        let age = parseInt(a)
+        if (!isNaN(age)) {
+            if (age > 18) {
+                let adult = alert("you can drive")
+            }
+            else if (age < 18 && age > 15) {
+                let teen = alert("you can drive, But drive slowly Minor")
+            }
+            else {
+                let kid = alert("You can not drive! Stay home")
+            }
+        }
+        else {
+            alert("Retry Please!, Enter Numbers Only")
+        }
+    </script>
+</body>
+
+</html>

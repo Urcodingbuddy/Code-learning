@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let player = prompt("enter r,p,s = r for Rock , p for Paper, s for Scissor")
+        let rand = Math.round(Math.random() * 2);
+        let computer = ["r", "p", "s"][rand];
+
+        const match = (computer, player) => {
+            if (player === computer) {
+                return "Tie";
+            }
+            else if ((player = "r") && (computer = "p")) {
+                return "computer"
+            }
+            else if ((player = "p") && (computer = "s")) {
+                return "computer"
+            }
+            else if ((player = "p") && (computer = "s")) {
+                return "computer"
+            }
+            else if ((player = "p") && (computer = "r")) {
+                return "player"
+            }
+            else if ((player = "s") && (computer = "p")) {
+                return "player"
+            }
+            else if ((player = "r") && (computer = "s")) {
+                return "player"
+            }
+        }
+        let result = match(computer, player)
+
+        if (result === "Tie") {
+            document.write(` Opps ${result}  and Players's selection is :${player} and Computer's is  : ${computer}`)
+        }
+        else {
+            document.write(` The ${result} Won  and Players's selection is :${player} and Computer's is  : ${computer}`)
+        }
+        
+    </script>
+</body>
+
+</html>

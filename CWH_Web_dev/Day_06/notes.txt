@@ -1,0 +1,12 @@
+1. Cumulative Layout Shift (CLS)
+
+
+Cumulative Layout Shift (CLS) is a metric used to measure the visual stability of a web page as it loads and renders in a user's browser
+
+2. Largest Contextual Paint (LCP)
+
+The Largest Contenful Paint metric reports the render time of the largest "image of the Block"
+
+3. First Input Delay(FID)
+
+The Frist Input Delay measures the time From when a user first intrects with a page (this is , When they click a link) to the time when the brouser is actually able to login proccesing event handelers in response to that intrection.

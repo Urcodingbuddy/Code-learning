@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90vw;
+            height: 90vh;
+            gap: 30px;
+
+
+        }
+        .box1,.box2,.box3{
+            height: 50px;
+            width: 50px;
+            border: none;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <script>
+            
+            for(let i = 1; i<=3; i++){
+                document.querySelector(".container")
+                let div =  document.createElement("div");
+                div.className = "box box" + i;
+                document.querySelector(".container").appendChild(div);
+                div.innerHTML = "We are booxes"
+            }
+            
+
+            
+    </script>
+    </div>
+
+
+
+    
+</body>
+</html>
+
+
+

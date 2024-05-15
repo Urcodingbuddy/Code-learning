@@ -1,0 +1,28 @@
+html{
+    border: 1cm;
+    background-color: rgba(241, 240, 241, 0.995);
+}
+h1{
+    color: rgb(160, 37, 194);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+h2{
+    stroke: black;
+    scroll-behavior: smooth;
+    color: rgb(160, 37, 194);
+    
+}
+audio{
+    background-color: rgb(239, 234, 240);
+}
+label{
+    color: blueviolet;
+    font-size: x-large;
+    stroke: black;
+    stroke-width: 1cm;
+}
+
+textarea{
+    color: aquamarine;
+}

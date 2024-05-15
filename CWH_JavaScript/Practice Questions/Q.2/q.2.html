@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        alert("Welcome to the Quiz game!");
+
+        let allQuestions = [
+            "What is the capital of France?",
+            "Who wrote 'Romeo and Juliet'?"
+        ];
+        let allAnswers = [
+            "paris",
+            "shakespeare"
+        ];
+        let options = [
+            `Options are: "Berlin", "Andorra la Vella", "Paris", "Brussels"`,
+            `Options: "Eloise Sterlingham", "Shakespeare", "Lysander Thornley", "Cordelia"`
+        ];
+
+        function startQuiz() {
+            let score = 0;
+            for (let i = 0; i < allQuestions.length; i++) {
+                alert(allQuestions[i]); // Show the question
+                let userAnswer = prompt(options[i]).toLowerCase(); // Ask for the answer
+                if (userAnswer === allAnswers[i]) {
+                    score++;
+                }
+            }
+            let Resultpercent = (score / allQuestions.length)*100;
+            alert(`Quiz completed! Your Result is ${Resultpercent}%.`);
+        }
+
+        startQuiz();
+        window.close();
+        
+    </script>
+</body>
+
+</html>
+
+// Improper code 😭
+
+
+// alert("Wellcome to Quiz Game!");
+        // function main() {
+        //     var userans;
+        //     let score = 0
+
+        //     let allquestions = [
+        //         "What is the Caption of France ?",
+        //         `Who Wrote"Romeo and Juliet"`
+        //     ]
+        //     let allanswers = [
+        //         "paris",
+        //         "shakespeare"
+        //     ]
+        //     let options = [
+        //     `Options are: "Berlin", "Andorra la Vella", "Paris" ,"Brussel"`,
+        //     `Options: "Eloise Sterlingham", "Shakesspare", "Lysander Thornley" , "Cordelia"`
+        //     ]
+
+
+
+        //     allquestions.forEach((question) => {
+        //         alert(question)
+        //         let i = 0;
+        //         while (i < allquestions.length) {
+                    
+        //             if (allquestions[i]) {
+        //                 userans = prompt(options[i])
+        //                 i++;
+        //             }
+                    
+        //             else if (allquestions[i]) {
+        //                 userans = prompt(options[i])
+        //                 i++;
+        //             }
+
+        //             if (allanswers[i] == userans) {
+        //                 score += 50;
+        //             }
+                    
+        //         }
+
+           
+
+        //     })
+        //     return score;
+
+
+
+        // }
+        // let restart = true;
+
+
+        // while (restart) {
+        //     const score = main();
+        //     const confirmation = confirm(`Congratulations Quiz Game is now completed, You Result is ${score}% `);
+        //     if (!confirmation) {
+        //         restart = true;
+        //     }
+        //     else {
+        //         restart = false;
+        //     }
+        // }
+
+        // 
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - Lets learn How to code</title>
+</head>
+
+<body>
+    <h1>Fill out this Form</h1>
+    <form action="post">
+        <div>
+            <label for="username">Username/Email</label>
+            <input type="text" id="username" name="UserName" placeholder="Enter UserName">
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="Password" placeholder="Must be 8 characters or more">
+        </div>
+
+        <div>
+            <input type="radio" id="school" name="education" value="School">
+            <label for="school">Teenager</label>
+
+            <input type="radio" id="college" name="education" value="College">
+            <label for="college">Adult</label>
+        </div>
+
+        <div>
+            <label for="terms">Accept Terms and Conditions</label>
+            <input type="checkbox" id="terms" name="Terms and Conditions">
+        </div>
+
+        <div>
+            <label for="privacy">Accept Privacy Policy</label>
+            <input type="checkbox" id="privacy" name="Privacy Policy">
+        </div>
+
+        <div>
+            <label for="cast">Select your Cast</label>
+            <select name="Cast" id="cast">
+                <option value="OBC">OBC</option>
+                <option value="Gen">Gen</option>
+                <option value="SC">SC</option>
+                <option value="ST">ST</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

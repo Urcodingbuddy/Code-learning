@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav color</title>
+    <style>
+        nav{
+            display: flex;
+
+        }
+        ul{
+            display: flex;
+            gap: 10px;
+            
+
+        }
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            height: 20px;
+            width: 50px;
+            border: none;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Hello</li>
+            <li>dodo</li>
+            <li>chocho</li>
+            <li>popo</li>
+            <li>tui tui</li>
+        </ul>
+    </nav>
+
+    <script>
+        let navcolor = document.querySelector('nav>ul>li:first-child');
+        navcolor.style.backgroundColor = 'red';
+        navcolor.style.color = 'white';
+    </script>
+</body>
+</html>

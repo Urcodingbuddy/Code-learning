@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(234, 222, 222);
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="box">hey am i box</div>
+        
+     </div>
+
+     <script>
+        let div = document.createElement("div");
+        div.innerHTML = "i have been inserted by <b>Ansh</b> "
+        div.setAttribute("class", "created");
+        document.querySelector(".container").append(div);
+
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("afterbegin","I am under the coding ocean")
+
+
+
+     </script>
+</body>
+</html>

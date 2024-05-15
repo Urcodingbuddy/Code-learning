@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = prompt("enter S,G,W")
+let cpui = Math.round(Math.random()*2 );
+let cpu = ["S","G","W"][cpui];
+// console.log(cpu)
+const match =(cpu , user)=>{
+    if(user===cpu){
+        return 0
+    }
+    else if((user = "S") && (cpu = "G") ){
+    return cpu
+    }
+    else if((user = "W") && (cpu = "S") ){
+    return cpu
+    }
+    else if((user = "G") && (cpu = "W") ){
+    return cpu
+    }
+    else if((user = "S") && (cpu = "W") ){
+    return user
+    }
+    else if((user = "W") && (cpu = "G") ){
+    return user
+    }
+    else if((user = "G") && (cpu = "S") ){
+    return user
+    }
+}
+let result = match(cpu, user)
+ document.write(`your result is ${result} and user number :${user} and cpu : ${cpu}`)
+
+// let user = prompt("Enter S, G, or W");
+// let cpui = Math.round(Math.random() * 2);
+// let cpu = ["S", "G", "W"][cpui];
+
+// const match = (cpu, user) => {
+//     if (user === cpu) {
+//         return 0;
+//     } else if ((user === "S" && cpu === "G") ||
+//                (user === "W" && cpu === "S") ||
+//                (user === "G" && cpu === "W")) {
+//         return cpu;
+//     } else {
+//         return user;
+//     }
+// };
+
+// let result = match(cpu, user);
+
+// document.write(`Your result is ${result} and your choice: ${user} and CPU's choice: ${cpu}`);
+
+    </script>
+</body>
+</html>

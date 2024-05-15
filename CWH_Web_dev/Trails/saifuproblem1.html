@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events and listening</title>
+</head>
+
+<body>
+    <div class="con">
+        <h1 id="h1">Here is heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius numquam quod laboriosam
+            mollitia eos, voluptatum ipsum, suscipit temporibus assumenda corrupti repellendus hic deleniti non minus
+            consectetur facere reiciendis libero maiores. Nobis ipsa voluptatum reprehenderit accusantium, suscipit
+            praesentium? Adipisci impedit fuga porro natus sed labore ut, molestiae quam quisquam vel maiores eaque
+            repudiandae omnis nam culpa placeat. Aliquam ipsa similique voluptatibus, officia explicabo eius fugit optio
+            placeat?</p>
+        <button id="btn">Show/Hide</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    let btn = document.getElementById('btn');
+    let para = document.getElementById('para');
+
+    btn.addEventListener("click", function() {
+        if (para.style.display !== 'none') {
+            para.style.display = 'none';
+        } else {
+            para.style.display = 'block';
+        }
+    });
+});
+
+    </script>
+</body>
+
+</html>

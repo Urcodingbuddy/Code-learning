@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let repeat
+        let age = prompt("Enter Your Age")
+        let answer;
+
+        do {
+            if (!isNaN(age)) {
+                if (age > 18) {
+                    answer = "You can drive";
+                    alert(answer)
+                }
+                else if (age <= 18 && age > 15) {
+                    answer = "You can Drive, But Drive Slowly, You're a Minor"
+                    alert(answer)
+                }
+                else {
+                    answer = "You cannot Drive! Stay Home"
+                    alert(answer)
+                }
+            }
+            else {
+                answer = "Retry Please! Enter Numbers Only"
+                alert(answer)
+            }
+
+            repeat = confirm("Do You want to see the Result again ?");
+            if (repeat) {
+                alert(answer)
+            }
+        }   while (repeat)
+
+
+
+
+    </script>
+</body>
+
+</html>
