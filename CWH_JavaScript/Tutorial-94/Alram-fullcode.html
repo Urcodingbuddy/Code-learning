@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Alarm</title>
+    <link rel="icon" href="alarm.png" type="x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    /* user-select: none; */
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #0009DB, #4600DC, #800EAA, #9300D9);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.CircleClock {
+    backdrop-filter: blur(100px);
+    width: 550px;
+    height: 550px;
+    /* background-color: #8b8b8b; */
+    /* backdrop-filter: blur(70px); */
+    box-shadow: rgba(0, 0, 0, 0.059) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    background-color: rgba(19, 19, 19, 0.214);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: #ffffff26; */
+    backdrop-filter: blur(5px);
+}
+
+
+
+.clock {
+    background-color: #ffffff26;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    /* padding: 2px 20px; */
+    height: 120px;
+    width: 450px;
+    font-size: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(248, 230, 255, 0.699);
+    /* font-weight: 500; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.ampm {
+    color: rgba(187, 92, 219, 0.688);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 350px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.alarmset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    /* background-color: #8b8b8b; */
+    /* backdrop-filter: blur(70px); */
+    /* box-shadow: rgba(0, 0, 0, 0.059) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
+    background-color: rgba(0, 0, 0, 0.192);
+    /* border: none; */
+    border-radius: 50px;
+    /* position: relative; */
+    gap: 70px;
+}
+
+.options {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    color: white;
+    font-size: 30px;
+    background-color: #f609e693;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 48px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f609e64a;
+}
+
+
+.boxes {
+    /* border: 2px solid rgb(255, 40, 40); */
+    border-radius: 10px;
+    width: 100px;
+    height: 60px;
+    background-color: #ffffff52;
+    backdrop-filter: blur(5px);
+}
+
+@media(max-width:600px) {
+    .CircleClock {
+        width: 320px;
+        height: 320px;
+        /* background-color: #fff; */
+    }
+
+    .ampm {
+        font-size: 250px;
+    }
+
+
+}
+
+@media(max-width:1051px) {
+    .CircleClock {
+        width: 320px;
+        height: 320px;
+        /* background-color: #fff; */
+    }
+
+    .clock {
+        height: 60px;
+        width: 300px;
+        font-size: 60px;
+    }
+
+
+
+    .ampm {
+        font-size: 200px;
+    }
+
+    .alarmset {
+        width: 310px;
+        height: 200px;
+        gap: 40px;
+    }
+
+    .options {
+        gap: 12px;
+    }
+
+    button {
+        border-radius: 6px;
+        width: 130px;
+        height: 32px;
+        font-size: 18px;
+
+    }
+
+    .boxes {
+        border-radius: 10px;
+        width: 55px;
+        height: 40px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="CircleClock">
+            <div class="clock" id="clock">
+                <div class="time" id="time"></div>
+            </div>
+            <div class="ampm" id="ampm">PM</div>
+        </div>
+
+        <div class="alarmset">
+            <div class="options">
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+            </div>
+            <div class="btn"><button class="setalarm" id="setalarm">Set Alarm </button></div>
+            
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        setInterval(()=>{
+    let a = new Date();
+    let hours = a.getHours();
+    let minutes = a.getMinutes();
+    let seconds = a.getSeconds();
+    let setampm = hours >= 12 ? 'PM' : 'AM';
+
+   
+   hours  = hours< 10 ? '0' + hours : hours;
+   minutes = minutes< 10 ? '0' + minutes : minutes;
+   seconds = seconds< 10 ? '0' + seconds : seconds;
+
+
+ 
+   let innertime = `${hours}:${minutes}:${seconds}`;
+   let innerampm =`${setampm}`;
+   let ampm = document.getElementById('ampm');
+        ampm.innerText = innerampm;
+
+
+    let clock = document.getElementById('clock');
+        clock.innerText = innertime;
+},1000);
+    </script>
+</body>
+
+</html>
