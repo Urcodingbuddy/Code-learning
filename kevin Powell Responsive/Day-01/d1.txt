@@ -1,0 +1,4 @@
+In today's lession we learnt do use width unneccessrly unit or unless is it required 
+
+Becouse html div are defualt block (It means it takes all the width automatically)
+
