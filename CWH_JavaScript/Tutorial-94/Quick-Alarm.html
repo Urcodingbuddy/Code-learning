@@ -19,16 +19,41 @@
         </div>
 
         <div class="alarmset">
+            <h1>Set Your Alarm</h1>
             <div class="options">
-                <div class="boxes"></div>
-                <div class="boxes"></div>
-                <div class="boxes"></div>
-                <div class="boxes"></div>
+
+                <div class="boxes">
+                    <!-- Dropdown for Hours -->
+                    <label for="hours">Hour:</label>
+                    <select id="hours">
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="boxes"><label for="minutes">Minutes:</label>
+                    <select id="minutes">
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+
+                <div class="boxes">
+                    <label for="ampm">Am/Pm:</label>
+
+                    <!-- Dropdown for AM/PM -->
+                    <select id="ampm">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+
             </div>
-            <div class="btn"><button class="setalarm" id="setalarm">Set Alarm </button></div>
-            
+            <div class="btn">
+                <button class="setalarm" id="setalarm">-</button>
+
+            </div>
+            <p id="selected-time">Selected time: --:-- --</p>
         </div>
     </main>
+    <script src="newjscript.js"></script>
     <script src="script.js"></script>
 </body>
 

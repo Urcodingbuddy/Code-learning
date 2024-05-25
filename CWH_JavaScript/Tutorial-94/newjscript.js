@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const hoursDropdown = document.getElementById('hours');
     const minutesDropdown = document.getElementById('minutes');
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let alarmSet = false;
 
     // Populate hours dropdown
-    for (let i = 1; i <= 12;i++) {
+    for (let i = 1; i <= 12; i++) {
         let option = document.createElement('option');
         option.value = i < 10 ? '0' + i : i;
         option.textContent = i;
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedAmPm = ampmDropdown.value;
         selectedTimeDisplay.textContent = `Selected time: ${selectedHour}:${selectedMinute} ${selectedAmPm}`;
         alarmTime = `${selectedHour}:${selectedMinute} ${selectedAmPm}`;
-        ampmDropdown.value = selectedAmPm;
+        ampmDropdown.value = selectedAmPm
     }
 
     // Add event listeners to the dropdowns
@@ -42,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to play alarm sound
     function play() {
-        var audio = new Audio('https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/AlarmClockSound.mp3');
+        var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3');
         audio.play();
     }
 
@@ -94,6 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
+
 setInterval(() => {
     let a = new Date();
     let hours = a.getHours();
@@ -107,14 +109,19 @@ setInterval(() => {
         hours = hours - 12;
     }
 
+
+
     hours = hours < 10 ? '0' + hours : hours;
     minutes = minutes < 10 ? '0' + minutes : minutes;
     seconds = seconds < 10 ? '0' + seconds : seconds;
 
-    var innertime= `${hours}:${minutes}:${seconds}`;
+
+
+    var innertime = `${hours}:${minutes}:${seconds}`;
     let innerampm = `${setampm}`;
     let ampm = document.getElementById('ampm');
     ampm.innerText = innerampm;
+
 
     let clock = document.getElementById('time');
     clock.innerText = innertime;
