@@ -1,0 +1,20 @@
+* {box-sizing: border-box;}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    background: #23424A;
+    color: white;
+    border-radius: 20px; 
+    margin: 20px auto 20px auto;
+
+    padding: 5em;
+    width: 80%;
+    /* margin: 0 auto; */
+    
+
+    /* height: 300px; */
+}

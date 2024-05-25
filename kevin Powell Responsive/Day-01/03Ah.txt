@@ -1,0 +1,3 @@
+Always Avoid Heights becouse it is non-volatile 
+so gives paddign insted, 
+So it will automatically adjust its height according to its content.
