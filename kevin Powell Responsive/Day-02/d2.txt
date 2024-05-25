@@ -1,0 +1,3 @@
+ALways use Width in % Persentage when you are trying to get responsive layout 
+For example its jsut like child{Width:50%} 
+so it will take 50% out of its  Parent  100% width
