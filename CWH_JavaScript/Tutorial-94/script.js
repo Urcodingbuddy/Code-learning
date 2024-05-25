@@ -21,3 +21,14 @@ setInterval(()=>{
     let clock = document.getElementById('clock');
         clock.innerText = innertime;
 },1000);
+
+
+function play(){
+    var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3')
+    audio.play();
+}
+
+
+setInterval(()=>{
+    let d = new
+})
