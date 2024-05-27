@@ -101,6 +101,8 @@ setInterval(() => {
     let seconds = a.getSeconds();
     let setampm = hours >= 12 ? 'PM' : 'AM';
 
+    
+
     if (hours === 0) {
         hours = 12;
     } else if (hours > 12) {
