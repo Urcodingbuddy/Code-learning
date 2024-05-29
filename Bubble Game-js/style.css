@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body,
+html {
+    /* background-color: rgb(92, 160, 92); */
+    width: 100%;
+    height: 100%;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7cb383;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#panel {
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px rgba(7, 40, 2, 0.665);
+}
+
+#ptop {
+    user-select: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 13%;
+    background-color: #33532b;
+    font-size: 12px;
+    padding: 10px
+}
+
+.elem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.199); */
+    width: 10%;
+    gap: 10px;
+    /* padding: 60px; */
+    margin: 20px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    color: rgb(18, 119, 57);
+    font-size: 16.2px;
+    font-weight: 700;
+    width: 5%;
+    padding: 10px 20px;
+}
+
+#pbtm {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 12px;
+    width: 100%;
+    height: calc(100% - 12.8%);
+    gap: 12px;
+    background-color: burlywood;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+}
+
+.#pbtn::-webkit-scrollbar {
+    display: none;
+}
+
+.bubble {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #4b9a37;
+    color: white;
+    border-radius: 50%;
+}
+
+.bubble:hover {
+    color: #33532b;
+    background-color: rgb(254, 118, 69);
+    cursor: pointer;
+    border: 2.5px solid #4b9a37;
+}
+
+@media (max-width:600px) {
+    #ptop {
+        font-size: 10px;
+        /* display: flex; */
+        /* justify-content: space-evenly; */
+        /* align-items: center; */
+        /* flex-direction: column; */
+    }
+    .elem{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+    #panel {
+        overflow: hidden;
+        width: 90%;
+        height: 95%;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 10px 10px 50px rgba(7, 40, 2, 0.665);
+    }
+}
