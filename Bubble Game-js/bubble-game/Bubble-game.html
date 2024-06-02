@@ -25,7 +25,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #7cb383;
+    background-color: #a4c6cb;
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -37,7 +37,9 @@ main {
     height: 80%;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 10px 10px 50px rgba(7, 40, 2, 0.665);
+    /* box-shadow: 10px 10px 50px rgba(7, 40, 2, 0.665); */
+    box-shadow: 18px 18px 15px #4b4b4b,
+                -15px -15px 20px #ffffff
 }
 
 #ptop {
@@ -115,6 +117,14 @@ main {
     cursor: pointer;
     border: 2.5px solid #4b9a37;
 }
+#pbtm h1{
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(7, 8, 11, 0.37);
+    border: 2px solid rgba(255,255,255,0.18);
+    padding: 10px 20px;
+    user-select:none;
+    border-radius: 20px;
+}
 
 @media (max-width:600px) {
     #ptop {
@@ -150,7 +160,7 @@ main {
                 </div>
                 <div class="elem">
                     <h2>Timmer</h2>
-                    <div id="timerval" class="box">60</div>
+                    <div id="timerval" class="box">30</div>
                 </div>
                 <div class="elem">
                     <h2>Score</h2>
@@ -176,13 +186,13 @@ main {
 
 
 var score=0;
-var timer = 6;
+var timer = 30;
 var hitrn = 0;
 var clickedNum = 0;
+
 function increaseScore() {
     score += 10;
     document.querySelector("#scoreval").textContent = score;
-    
 }
 function MakeNewHit() {
     hitrn = Math.floor(Math.random() * 10)
@@ -196,7 +206,8 @@ function countdown() {
         }
         else {
             clearInterval(timerint)
-            document.querySelector("#pbtm").innerHTML = `<h1>Game Over</h1>`;
+            document.querySelector("#pbtm").innerHTML = `<h1>Game Over</h1>
+            <h1>Score : ${score}</h1>`;
         }
     }, 1000);
 }
@@ -222,7 +233,6 @@ document.querySelector("#pbtm").addEventListener("click",function(dets){
     }
     
 })
-increaseScore()
 
 countdown()
 makebubble()
