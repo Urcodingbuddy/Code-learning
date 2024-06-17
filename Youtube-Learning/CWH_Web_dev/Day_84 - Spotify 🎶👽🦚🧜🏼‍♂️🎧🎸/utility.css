@@ -1,0 +1,37 @@
+.border{
+    /* border: 2px solid rgb(255, 255, 255); */
+    margin: 4px;
+    border-radius: 5px;
+
+}
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+.item-center{
+    align-items: center;
+}
+
+
+.invert{
+    filter: invert(1);
+}
+.bg-greyscale{
+ background-color: #121212;
+}
+
+.space-between{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 230px;
+}
+
+.add-svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
