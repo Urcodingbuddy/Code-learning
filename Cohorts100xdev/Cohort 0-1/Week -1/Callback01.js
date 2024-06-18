@@ -7,8 +7,5 @@ function calculateArithmetic(a, b, ArithmeticfinalFunc) {
     }
     
 }
-
-
-
 const value = calculateArithmetic(88, 58, "sum")
 console.log(value)
