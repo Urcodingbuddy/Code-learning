@@ -146,3 +146,18 @@ for(let i = 0; i<alluser.length;i++){
 const numberd = Array.from({length:100}, (_, index) => index+1);
 numberd.reverse();
 console.log(numberd)
+
+
+//  Functions
+// Q.1 find sum using functions
+
+function sum(a,b){
+    const returnvalue = a + b;
+    return returnvalue;
+}
+let a = 4;
+let b = 5;
+let c = sum(a,b)
+console.log(`The sum of ${a} + ${b} is ${c}`)
+
+
