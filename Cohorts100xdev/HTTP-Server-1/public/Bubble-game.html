@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body,
+html {
+    /* background-color: rgb(92, 160, 92); */
+    width: 100%;
+    height: 100%;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a4c6cb;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#panel {
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    /* box-shadow: 10px 10px 50px rgba(7, 40, 2, 0.665); */
+    box-shadow: 18px 18px 15px #4b4b4b,
+                -15px -15px 20px #ffffff
+}
+
+#ptop {
+    user-select: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 13%;
+    background-color: #33532b;
+    font-size: 12px;
+    padding: 10px
+}
+
+.elem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.199); */
+    width: 10%;
+    gap: 10px;
+    /* padding: 60px; */
+    margin: 20px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    color: rgb(18, 119, 57);
+    font-size: 16.2px;
+    font-weight: 700;
+    width: 5%;
+    padding: 10px 20px;
+}
+
+#pbtm {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 12px;
+    width: 100%;
+    height: calc(100% - 12.8%);
+    gap: 12px;
+    background-color: burlywood;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+}
+
+.#pbtn::-webkit-scrollbar {
+    display: none;
+}
+
+.bubble {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #4b9a37;
+    color: white;
+    border-radius: 50%;
+}
+
+.bubble:hover {
+    color: #33532b;
+    background-color: rgb(254, 118, 69);
+    cursor: pointer;
+    border: 2.5px solid #4b9a37;
+}
+#pbtm h1{
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(7, 8, 11, 0.37);
+    border: 2px solid rgba(255,255,255,0.18);
+    padding: 10px 20px;
+    user-select:none;
+    border-radius: 20px;
+}
+
+@media (max-width:600px) {
+    #ptop {
+        font-size: 10px;
+        /* display: flex; */
+        /* justify-content: space-evenly; */
+        /* align-items: center; */
+        /* flex-direction: column; */
+    }
+    .elem{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+    #panel {
+        overflow: hidden;
+        width: 90%;
+        height: 95%;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 10px 10px 50px rgba(7, 40, 2, 0.665);
+    }
+}
+    </style>
+</head>
+<body>
+    <main id="main">
+        <div id="panel">
+            <div id="ptop">
+                <div class="elem">
+                    <h2>Hit</h2>
+                    <div id="hitval" class="box">4</div>
+                </div>
+                <div class="elem">
+                    <h2>Timmer</h2>
+                    <div id="timerval" class="box">30</div>
+                </div>
+                <div class="elem">
+                    <h2>Score</h2>
+                    <div id="scoreval" class="box">0</div>
+                </div>
+            </div>
+
+            <div id="pbtm">
+                <div class="bubble">5</div>
+            </div>
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        //  What is Event Bubbling ?
+//  when we click on any element , then it will raise an event 
+//  and if it cant find and event listner on that element
+//  So it will find Event listner in its Parent
+//  if listner is not found in first parent So it will Start
+//  finding the listner in parent of parents if closest parent -
+//  This is called Event Bubbling
+
+
+var score=0;
+var timer = 30;
+var hitrn = 0;
+var clickedNum = 0;
+
+function increaseScore() {
+    score += 10;
+    document.querySelector("#scoreval").textContent = score;
+}
+function MakeNewHit() {
+    hitrn = Math.floor(Math.random() * 10)
+    document.querySelector("#hitval").textContent = (hitrn)
+}
+function countdown() {
+    var timerint = setInterval(function () {
+        if (timer > 0) {
+            timer--;
+            document.querySelector("#timerval").textContent = timer;
+        }
+        else {
+            clearInterval(timerint)
+            document.querySelector("#pbtm").innerHTML = `<h1>Game Over</h1>
+            <h1>Score : ${score}</h1>`;
+        }
+    }, 1000);
+}
+function makebubble() {
+    var clutter = "";
+
+    for (var i = 0; i <= 104; i++) {
+        var rn = Math.floor(Math.random() * 10)
+        clutter += `<div class="bubble">${rn}</div>`;
+    }
+
+    document.querySelector("#pbtm").innerHTML = clutter;
+}
+
+
+
+document.querySelector("#pbtm").addEventListener("click",function(dets){
+    clickedNum = Number(dets.target.textContent)
+    if(hitrn==clickedNum){
+        increaseScore()
+        MakeNewHit()
+        makebubble()
+    }
+    
+})
+
+countdown()
+makebubble()
+MakeNewHit()
+
+
+    </script>
+</body>
+</html>
