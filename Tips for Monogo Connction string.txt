@@ -1,0 +1,38 @@
+want a Quick Connect to '100xdevs-Practice' so just go through  - { "mongodb+srv://anshpethe110:%40mangoanshpethe159@cluster0.702twr0.mongodb.net/100xdevs-Practice?retryWrites=true&w=majority" }  🛖🔍
+ 
+
+/*
+mongoose.connect(
+    "mongodb+srv://anshpethe110:%40mangoanshpethe159@cluster0.702twr0.mongodb.net/100xdevs-Practice?retryWrites=true&w=majority"  
+    /*
+       ------- Dont try them , useless 👇👇 --------------, instead use this ☝🏼☝🏼 -------
+    //mongodb+srv://anshpethe110:%40mangoanshpethe159@cluster0.702twr0.mongodb.net/
+    //"mongodb+srv://anshpethe110:%40mangoanshpethe159@cluster0.702twr0.mongodb.net/"
+    */
+);
+
+*/
+
+
+
+"100xdevs-Practice" -  is a data base name   - example code usage is  -  
+											
+const express = require("express");
+const jwt = require("jsonwebtoken");
+const mongoose = require("mongoose");
+const jwtPassword = "123456";
+mongoose.connect(
+    "mongodb+srv://anshpethe110:%40mangoanshpethe159@cluster0.702twr0.mongodb.net/100xdevs-Practice?retryWrites=true&w=majority"
+);
+const User = mongoose.model('users',{
+    name: String,
+    email: String,
+    password: String
+})
+
+const user = new User({
+    name:"Ansh Pethe",
+    email: "anshpethe110@gmail.com",
+    password: "jwtPassword"
+})
+user.save();
