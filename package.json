@@ -4,6 +4,7 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.4",
+    "supertest": "^7.0.0",
     "zod": "^3.23.8"
   },
   "name": "code-learning",
