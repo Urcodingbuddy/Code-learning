@@ -12,7 +12,7 @@ let requestCount = 0;
 
 
 app.use(function(req, res, next) {
-  requestCount = requestCount + 1;
+  requestCount = requestCount++;
   next();
 });
 
