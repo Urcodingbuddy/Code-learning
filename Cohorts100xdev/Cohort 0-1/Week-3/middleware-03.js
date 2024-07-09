@@ -24,8 +24,6 @@ app.get("/ride2", (req, res, next) => {
         msg: "You have safly ridden the ride 2"
     })
 })
-
-
 app.listen(3000, "0.0.0.0", ()=>{
     console.log("Server is Running on Port : 3000  --- :)")
 });
