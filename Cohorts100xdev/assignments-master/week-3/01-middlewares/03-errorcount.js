@@ -5,6 +5,13 @@ const express = require('express');
 const app = express();
 let errorCount = 0;
 
+function errorHandle(err, req, res, next) {
+  errorCount++;
+  console.error(err.stack);
+  res.status(404).send('Something broke!');
+  next(err); // Pass the error to the next middleware in the stack
+}
+
 // You have been given an express server which has a few endpoints.
 // Your task is to
 // 1. Ensure that if there is ever an exception, the end user sees a status code of 404
@@ -22,5 +29,11 @@ app.post('/user', function(req, res) {
 app.get('/errorCount', function(req, res) {
   res.status(200).json({ errorCount });
 });
+
+app.use(errorHandle)
+
+app.listen(3000, "0.0.0.0", ()=>{
+  console.log("server is activated on Port : 3000  :)")
+})
 
 module.exports = app;
