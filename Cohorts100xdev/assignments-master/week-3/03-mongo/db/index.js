@@ -1,27 +1,46 @@
 const mongoose = require('mongoose');
 
+// Define connection options
+const connectionOptions = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+};
+
 // Connect to MongoDB
-mongoose.connect('your-mongodb-url');
+mongoose.connect('mongodb+srv://anshpethe110:%40mangoanshpethe159@cluster0.702twr0.mongodb.net/100xdevs-Practice?retryWrites=true&w=majority', connectionOptions)
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.log(err));
 
 // Define schemas
-const AdminSchema = new mongoose.Schema({
-    // Schema definition here
+const adminSchema = new mongoose.Schema({
+  username: String,
+  password: String
 });
 
-const UserSchema = new mongoose.Schema({
-    // Schema definition here
+const userSchema = new mongoose.Schema({
+  username: String,
+  password: String,
+  purchasedCourses: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Course'
+  }]
 });
 
-const CourseSchema = new mongoose.Schema({
-    // Schema definition here
+const courseSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  imageLink: String,
+  price: Number
 });
 
-const Admin = mongoose.model('Admin', AdminSchema);
-const User = mongoose.model('User', UserSchema);
-const Course = mongoose.model('Course', CourseSchema);
+// Create models
+const Admin = mongoose.model('Admin', adminSchema);
+const User = mongoose.model('User', userSchema);
+const Course = mongoose.model('Course', courseSchema);
 
+// Export models
 module.exports = {
-    Admin,
-    User,
-    Course
-}
+  Admin,
+  User,
+  Course
+};
