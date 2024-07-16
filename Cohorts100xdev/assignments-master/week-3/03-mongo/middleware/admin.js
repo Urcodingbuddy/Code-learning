@@ -12,6 +12,7 @@ function adminMiddleware(req, res, next) {
     })
     .then(function(value){
         if(value){
+            console.log('Admin authenticated succesfully')
             next();
         }
         else{

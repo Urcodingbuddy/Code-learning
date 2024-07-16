@@ -12,6 +12,7 @@ function userMiddleware(req, res, next) {
     })
     .then(function(value){
         if(value){
+            console.log('User auth success')
             next();
         }
         else{

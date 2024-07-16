@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const { Admin, Course } = require("../db");
-// const User  = require("../db");
+const User  = require("../db");
 const adminMiddleware = require("../middleware/admin");
 const router = Router();
 
@@ -9,8 +9,8 @@ const router = Router();
 // Admin Routes
 router.post('/signup', async (req, res) => {
     // Implement admin signup logic
-    const username = req.body.username;
-    const password = req.body.password;
+    const username = req.headers.username;
+    const password = req.headers.password;
 
     // check if a user with this username already exists
     await Admin.create({
@@ -44,14 +44,19 @@ router.post('/courses', adminMiddleware, async (req, res) => {
     })
 });
 
-router.get('/courses', adminMiddleware, async (req, res) => {
-    // Implement fetching all courses logic
-      const response = await Course.find({})
-        res.json({
-            courses: response
-        })
+router.get('/courses', async (req, res) => {
+    try {
+        const courses = await Course.find({}).exec();
+        if (courses) {
+          res.json({ courses });
+        } else {
+          res.status(404).json({ message: "No courses found" });
+        }
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Internal Server Error" });
+      }
 });
-
 
 
 module.exports = router;
