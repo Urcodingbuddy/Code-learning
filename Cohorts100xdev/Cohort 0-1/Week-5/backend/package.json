@@ -14,7 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
+<<<<<<< HEAD
     "jsonwebtoken": "^9.0.2",
     "zod": "^3.23.8"
+=======
+    "jsonwebtoken": "^9.0.2"
+>>>>>>> 7c3bd26f803a9863d7c6c32aa1f70707a7bf2771
   }
 }
