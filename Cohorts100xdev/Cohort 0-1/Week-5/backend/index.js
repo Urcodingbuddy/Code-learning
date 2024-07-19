@@ -2,11 +2,15 @@
 const port = 3000
 const express = require("express")
 const app = express()
-
-// import {createTodo,updateTodo} from "module";
 const { todo } = require("../backend/mongo");
 const { createTodo, updateTodo } = require("../backend/types");
-
+const cors = require('cors')
+app.use(cors({
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
+    credentials: true, // Allow cookies
+}))
 
 
 
