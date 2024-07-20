@@ -11,13 +11,8 @@ app.use(cors({
     allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
     credentials: true, // Allow cookies
 }))
-
-
-
-
 app.get("/todo", async function (req, res) {
     console.log("get invoked")
-
     try{
         const todos = await todo.find({});
         res.status(200).json(todos)
@@ -31,7 +26,6 @@ app.get("/todo", async function (req, res) {
 app.use(express.json())
 app.post("/todo", async function (req, res) {
     console.log("post invoked")
-
     const createPayload = req.body;
     const parsepayload = createTodo.safeParse(createPayload);
     try {
@@ -55,10 +49,7 @@ app.post("/todo", async function (req, res) {
             msg: "Something went wrong"
         })
     }
-    
-
 })
-
 app.put("/completed", async function (req, res) {
     console.log("put invoked")
     const updatePayload = req.body;
@@ -84,10 +75,8 @@ app.put("/completed", async function (req, res) {
         res.status(500).json({
             msg: "Something went wrong"
         })
-    }
-    
+    }  
 })
-
 app.listen(port, "0.0.0.0", () => {
     console.log(`Server is activated on port : ${port}  :)`)
 })

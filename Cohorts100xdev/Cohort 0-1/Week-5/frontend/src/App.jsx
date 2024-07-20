@@ -23,7 +23,7 @@ function App() {
   };
   return (
     <div>
-      <CreateTodo></CreateTodo>
+      <CreateTodo onTodoCreated={handleTodoCreated}></CreateTodo>
       <Todos todos = {todos}></Todos>
     </div>
 
