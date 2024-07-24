@@ -9,10 +9,8 @@ function App() {
     .then(function(res){
       setTodos(res.data)
     console.log("backend-responded")
-
     })
   },[])
-
   return( <div>
     {todos.map(todos =>  <Todo key={todos.id} title={todos.title} id={todos.id} />)}
   </div>
