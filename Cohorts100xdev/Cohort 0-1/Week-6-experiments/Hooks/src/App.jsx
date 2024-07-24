@@ -25,4 +25,3 @@ function Todo({title, id}){
     )
 }
 export default App
-
