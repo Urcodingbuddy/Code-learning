@@ -1,35 +1,45 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [exchange1Data, setExchange1Data] = useState({});
+  const [exchange2Data, setExchange2Data] = useState({});
+  const [bankData, setBankData] = useState({});
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  useEffect(() => {
+    setExchange1Data({
+      return: 100
+    })
+  }, [])
+  useEffect(() => {
+    setExchange2Data({
+      return: 200
+    })
+  }, [])
+  useEffect(() => {
+    setTimeout(() => {
+      setBankData({
+        income: 500
+      })
+    }, 5000)
+  }, [/*exchange1Data, exchange2Data*/])
+  const calculateCryptoReturns = useCallback(()=>{
+    return exchange1Data.return + exchange2Data.return
+  },[exchange1Data, exchange2Data])
+
+  return <div>
+    <CryptoGainsCalculator calculateCryptoReturns={calculateCryptoReturns} />
+  </div>
 }
+
+
+const CryptoGainsCalculator = useCallback(function(){
+  console.log("Crypto Child re-rendered")
+  return <div>
+    Your Crypto return are {calculateCryptoReturns()}
+  </div>
+})
 
 export default App
