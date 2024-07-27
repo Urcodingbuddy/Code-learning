@@ -7,7 +7,6 @@ function useTodos(){
     .then((res)=>{
       setTodos(res.data.todos)
       console.log(res.data.todos)
-
     })
   },[])
   return todos;
@@ -17,9 +16,6 @@ function App() {
   const todos = useTodos();
   return (
     {todos}
-    
   )
 }
-
-
 export default App
