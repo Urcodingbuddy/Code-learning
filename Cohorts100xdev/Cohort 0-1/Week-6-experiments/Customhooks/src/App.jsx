@@ -1,18 +1,25 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import './App.css'
+function useTodos(){
+  const [todos, setTodos] = useState(0)
+  useEffect(()=>{
+    axios.get("")
+    .then((res)=>{
+      setTodos(res.data.todos)
+      console.log(res.data.todos)
 
+    })
+  },[])
+  return todos;
+}
 function App() {
-  const [counter, setcounter] = useState(0)
-var a = 1;
-
-
+  console.log("Main func Called :)")
+  const todos = useTodos();
   return (
-    <>
-       <button onClick={()=>{
-        setcounter(counter+1)
-       }}>counter: {counter}</button>
-    </>
+    {todos}
+    
   )
 }
+
 
 export default App
