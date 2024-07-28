@@ -6,7 +6,7 @@ export function Assignment2() {
     const [count, setCount] = useState(0);
     const numberOfTimesReRendered = useRef(0);
     const handleReRender = () => {
-        // Update state to force re-render
+        // Update state to force re-render done
         setCount(count + 1);
     };
     numberOfTimesReRendered.current = numberOfTimesReRendered.current + 1;
