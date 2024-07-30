@@ -14,8 +14,12 @@ function App() {
 
 function Count({ count }) {
   return <div>
-    {count}
+    <CounRenderer count={count}/>
   </div>
+}
+
+function CounRenderer({count}){
+  return <div>Count: {count}</div>
 }
 
 function Buttons({count, setCount}) {
