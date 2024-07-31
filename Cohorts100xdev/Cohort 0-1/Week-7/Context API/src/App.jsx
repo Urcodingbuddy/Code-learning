@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useContext, useMemo, useState } from "react"
+import { CountContext } from "./context";
+import { RecoilRoot, useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { countAtom, evenSelector } from "./store/atoms/count";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <RecoilRoot>
+        <Count />
+      </RecoilRoot>
+    </div>
   )
+}
+
+function Count() {
+  console.log("re-render");
+  return <div>
+    <CountRenderer />
+    <Buttons />
+  </div>
+}
+
+function CountRenderer() {
+  const count = useRecoilValue(countAtom);
+  
+  return <div>
+    <b>
+      {count}
+    </b>
+    <EvenCountRenderer />
+  </div>
+}
+
+function EvenCountRenderer() {
+  const isEven = useRecoilValue(evenSelector);
+
+  return <div>
+    {isEven ? "It is even" : null}
+  </div>
+}
+
+function Buttons() {
+  const setCount = useSetRecoilState(countAtom);
+  console.log("buttons re-rendererd");
+
+  return <div>
+    <button onClick={() => {
+      setCount(count => count + 1)
+    }}>Increase</button>
+
+    <button onClick={() => {
+      setCount(count => count - 1)
+    }}>Decrease</button>
+  </div>
 }
 
 export default App
