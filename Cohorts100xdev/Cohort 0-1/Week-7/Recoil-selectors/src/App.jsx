@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useContext, useMemo, useState } from "react"
+import { CountContext } from "./context";
+import { RecoilRoot, useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { countAtom, evenSelector} from "./store/atom/count.jsx";
+
 import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <RecoilRoot>
+        <Count/>
+      </RecoilRoot>
+    </div>
   )
 }
+function Count() {
+  console.log("Count Re-renderd")
+  return <div>
+    <Input/>
+    <CountRenderer />
+    <Buttons  />
+    <IsEvenOdd/>
+  </div>
+}
 
+function Input(){
+  const [setInputValue] = useState("")
+  return <div>
+    <input type="text" onChange={(e)=>{
+      setInputValue(e.target.value)
+    }} />
+  </div>
+}
+
+
+function CountRenderer() {
+  const count = useRecoilValue(countAtom)
+  return <div>Count: {count}</div>
+}
+
+function IsEvenOdd(){
+  const isOdd = useRecoilValue(evenSelector)
+  return <div>
+    {isOdd ?  'It is Odd': 'It is Even'}
+  </div>
+}
+
+
+function Buttons() {
+  console.log("Button")
+  const setCount = useSetRecoilState(countAtom)
+  return <div>
+    <button onClick={() => { setCount(count => count - 1) }}> ➖ </button>
+    <button onClick={() => { setCount(count => count + 1) }}> ➕ </button>
+  </div>
+}
 export default App
+
+
