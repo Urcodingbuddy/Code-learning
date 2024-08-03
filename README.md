@@ -17,10 +17,4 @@ Welcome to my Web Development repository! This project showcases various web dev
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## 🙏 Acknowledgements
-
-Thanks to all the open-source projects and resources that help make this project possible!
-
----
-
-Feel free to explore, use, and contribute to this project! If you have any questions, feel free to open an issue or contact me directly. Happy coding! 🎉
+## 🙏  Happy coding! 🎉
