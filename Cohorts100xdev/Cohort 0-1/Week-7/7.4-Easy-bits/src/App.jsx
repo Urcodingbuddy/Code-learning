@@ -12,27 +12,12 @@ function App() {
   )
 }
 
-function MainApp(){
-  const [netWorkCount, setNetWorkCount] = useRecoilState(Notifications);
-  const totalnotificationCount = useRecoilValue(totalNotificationSelector); 
-  useEffect(()=>{
-    axios.get("https://sum-server.100xdevs.com/notifications")
-    .then(res=>{
-      setNetWorkCount(res.data);
-    })
-  })
-}
-
 
 function Navbarbtns() {
   const networkNotiCount = useRecoilValue(networkAtom);
   const jobsNotiCount = useRecoilValue(jobsAtom);
   const messageNotiCount = useRecoilValue(messageAtom);
   const NotifiCount= useRecoilValue(notifiAtom);
-  // const totalnotiAvtar = useEffect(()=>{
-  //     return useRecoilValue(totalnoticontSelector)
-  // },[networkNotiCount,jobsNotiCount,messageNotiCount,NotifiCount])
-
   const totalnotiAvtar = useRecoilValue(totalnoticontSelector)
    
   return <div>
